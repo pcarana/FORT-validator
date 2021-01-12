@@ -1,0 +1,62 @@
+MONITOR_MODULE_SRCS=	\
+	monitor/impl/prom_collector.c	\
+	monitor/impl/prom_collector_registry.c	\
+	monitor/impl/prom_counter.c	\
+	monitor/impl/prom_gauge.c	\
+	monitor/impl/prom_histogram_buckets.c	\
+	monitor/impl/prom_histogram.c	\
+	monitor/impl/prom_linked_list.c	\
+	monitor/impl/prom_map.c	\
+	monitor/impl/prom_metric.c	\
+	monitor/impl/prom_metric_formatter.c	\
+	monitor/impl/prom_metric_sample.c	\
+	monitor/impl/prom_metric_sample_histogram.c	\
+	monitor/impl/prom_process_fds.c	\
+	monitor/impl/prom_process_limits.c	\
+	monitor/impl/prom_process_stat.c	\
+	monitor/impl/prom_procfs.c	\
+	monitor/impl/prom_string_builder.c
+
+MONITOR_MODULE_HDRS=	\
+	monitor/def/prom_collector.h	\
+	monitor/def/prom_collector_registry.h	\
+	monitor/def/prom_counter.h	\
+	monitor/def/prom_gauge.h	\
+	monitor/def/prom.h	\
+	monitor/def/prom_histogram_buckets.h	\
+	monitor/def/prom_histogram.h	\
+	monitor/def/prom_linked_list.h	\
+	monitor/def/prom_map.h	\
+	monitor/def/prom_metric.h	\
+	monitor/def/prom_metric_sample.h	\
+	monitor/def/prom_metric_sample_histogram.h	\
+	monitor/impl/prom_collector_registry_i.h	\
+	monitor/impl/prom_collector_registry_t.h	\
+	monitor/impl/prom_collector_t.h	\
+	monitor/impl/prom_errors.h	\
+	monitor/impl/prom_linked_list_i.h	\
+	monitor/impl/prom_linked_list_t.h	\
+	monitor/impl/prom_log.h	\
+	monitor/impl/prom_map_i.h	\
+	monitor/impl/prom_map_t.h	\
+	monitor/impl/prom_metric_formatter_i.h	\
+	monitor/impl/prom_metric_formatter_t.h	\
+	monitor/impl/prom_metric_i.h	\
+	monitor/impl/prom_metric_sample_histogram_i.h	\
+	monitor/impl/prom_metric_sample_histogram_t.h	\
+	monitor/impl/prom_metric_sample_i.h	\
+	monitor/impl/prom_metric_sample_t.h	\
+	monitor/impl/prom_metric_t.h	\
+	monitor/impl/prom_process_fds_i.h	\
+	monitor/impl/prom_process_fds_t.h	\
+	monitor/impl/prom_process_limits_i.h	\
+	monitor/impl/prom_process_limits_t.h	\
+	monitor/impl/prom_process_stat_i.h	\
+	monitor/impl/prom_process_stat_t.h	\
+	monitor/impl/prom_procfs_i.h	\
+	monitor/impl/prom_procfs_t.h	\
+	monitor/impl/prom_string_builder_i.h	\
+	monitor/impl/prom_string_builder_t.h
+
+MONITOR_MODULE_HDRS+=monitor/http/promhttp.h
+MONITOR_MODULE_SRCS+=monitor/http/promhttp.c

@@ -31,6 +31,7 @@ check_PROGRAMS += thread_pool.test
 check_PROGRAMS += vcard.test
 check_PROGRAMS += vrps.test
 check_PROGRAMS += xml.test
+check_PROGRAMS += monitor/prom.test
 check_PROGRAMS += rtr/pdu.test
 check_PROGRAMS += rtr/primitive_reader.test
 TESTS = ${check_PROGRAMS}
@@ -71,6 +72,9 @@ vrps_test_LDADD = ${MY_LDADD} ${JANSSON_LIBS}
 xml_test_SOURCES = xml_test.c
 xml_test_LDADD = ${MY_LDADD} ${XML2_LIBS}
 
+monitor_prom_test_SOURCES = monitor/prom_test.c
+monitor_prom_test_LDADD = ${MY_LDADD} ${MICROHTTPD_LIBS}
+
 rtr_pdu_test_SOURCES = rtr/pdu_test.c
 rtr_pdu_test_LDADD = ${MY_LDADD}
 
@@ -81,6 +85,8 @@ EXTRA_DIST  = impersonator.c
 EXTRA_DIST += line_file/core.txt
 EXTRA_DIST += line_file/empty.txt
 EXTRA_DIST += line_file/error.txt
+EXTRA_DIST += monitor/prom_test_helpers.c
+EXTRA_DIST += monitor/prom_impersonator.h
 EXTRA_DIST += rtr/stream.c rtr/stream.h
 EXTRA_DIST += rtr/db/rtr_db_impersonator.c
 EXTRA_DIST += tal/lacnic.tal

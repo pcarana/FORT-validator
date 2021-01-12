@@ -16,6 +16,7 @@ SUBDIRS = src man test
 EXTRA_DIST  = NOTICE
 EXTRA_DIST += LICENSE
 EXTRA_DIST += src/asn1/asn1c/LICENSE
+EXTRA_DIST += src/monitor/LICENSE
 EXTRA_DIST += examples/tal/afrinic.tal
 EXTRA_DIST += examples/tal/apnic.tal
 EXTRA_DIST += examples/tal/lacnic.tal

@@ -126,12 +126,15 @@ fort_SOURCES += xml/relax_ng.c xml/relax_ng.h
 include asn1/asn1c/Makefile.include
 fort_SOURCES += $(ASN_MODULE_SRCS) $(ASN_MODULE_HDRS)
 
+include monitor/Makefile.include
+fort_SOURCES += $(MONITOR_MODULE_SRCS) $(MONITOR_MODULE_HDRS)
+
 fort_CFLAGS  = -Wall -Wno-cpp
 # Feel free to temporarily remove this one if you're not using gcc 7.3.0.
 #fort_CFLAGS += $(GCC_WARNS)
 fort_CFLAGS += -std=gnu11 -O2 -g $(FORT_FLAGS) ${XML2_CFLAGS}
 fort_LDFLAGS = $(LDFLAGS_DEBUG)
-fort_LDADD   = ${JANSSON_LIBS} ${CURL_LIBS} ${XML2_LIBS}
+fort_LDADD   = ${JANSSON_LIBS} ${CURL_LIBS} ${XML2_LIBS} ${MICROHTTPD_LIBS}
 
 # I'm tired of scrolling up, but feel free to comment this out.
 GCC_WARNS  = -fmax-errors=1
